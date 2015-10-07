@@ -29,33 +29,208 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btpesqu = new javax.swing.JButton();
+        jtcodigo = new javax.swing.JTextField();
+        jtnome = new javax.swing.JTextField();
+        jtdata = new com.toedter.calendar.JDateChooser();
+        jLabel3 = new javax.swing.JLabel();
+        jttel = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jtrg = new javax.swing.JTextField();
+        jtcpf = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtend = new javax.swing.JTextArea();
+        jrativo = new javax.swing.JRadioButton();
+        jrinativo = new javax.swing.JRadioButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        JBnovo = new javax.swing.JButton();
+        JBeditar = new javax.swing.JButton();
+        JBsalvar = new javax.swing.JButton();
+        JBsair = new javax.swing.JButton();
+        JBexcluir = new javax.swing.JButton();
 
         setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         setIconifiable(true);
         setMaximizable(true);
+        setResizable(true);
         setTitle("Cadastro de Pessoas");
         getContentPane().setLayout(null);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Código:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 40, 34, 14);
+        jLabel1.setBounds(30, 40, 50, 14);
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("Nome:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 40, 34, 14);
+        jLabel2.setBounds(140, 40, 50, 14);
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(230, 30, 73, 23);
+        btpesqu.setText("Ok");
+        btpesqu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btpesquActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btpesqu);
+        btpesqu.setBounds(430, 60, 45, 23);
 
-        pack();
+        jtcodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtcodigoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jtcodigo);
+        jtcodigo.setBounds(30, 60, 70, 20);
+
+        jtnome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtnomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jtnome);
+        jtnome.setBounds(140, 60, 260, 20);
+        getContentPane().add(jtdata);
+        jtdata.setBounds(500, 60, 130, 20);
+
+        jLabel3.setText("Data do Cadastro:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(500, 40, 100, 14);
+
+        jttel.setText("jTextField3");
+        getContentPane().add(jttel);
+        jttel.setBounds(410, 160, 200, 20);
+
+        jLabel4.setText("Endereço:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 220, 60, 14);
+
+        jLabel5.setText("CPF:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(220, 130, 23, 14);
+        getContentPane().add(jtrg);
+        jtrg.setBounds(30, 160, 130, 20);
+
+        jtcpf.setText("jTextField3");
+        getContentPane().add(jtcpf);
+        jtcpf.setBounds(220, 160, 140, 20);
+
+        jtend.setColumns(20);
+        jtend.setRows(5);
+        jScrollPane1.setViewportView(jtend);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(30, 240, 440, 96);
+
+        jrativo.setText("Ativo");
+        jrativo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrativoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jrativo);
+        jrativo.setBounds(500, 260, 51, 23);
+
+        jrinativo.setText("Inativo");
+        jrinativo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrinativoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jrinativo);
+        jrinativo.setBounds(500, 290, 59, 23);
+
+        jLabel6.setText("Telefone:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(410, 130, 46, 14);
+
+        jLabel7.setText("Status:");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(510, 240, 35, 14);
+
+        jLabel8.setText("RG:");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(30, 130, 18, 14);
+
+        JBnovo.setText("Novo");
+        getContentPane().add(JBnovo);
+        JBnovo.setBounds(40, 370, 57, 23);
+
+        JBeditar.setText("Editar");
+        getContentPane().add(JBeditar);
+        JBeditar.setBounds(150, 370, 61, 23);
+
+        JBsalvar.setText("Salvar");
+        JBsalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBsalvarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JBsalvar);
+        JBsalvar.setBounds(270, 370, 63, 23);
+
+        JBsair.setText("Sair");
+        getContentPane().add(JBsair);
+        JBsair.setBounds(400, 370, 51, 23);
+
+        JBexcluir.setText("Excluir");
+        getContentPane().add(JBexcluir);
+        JBexcluir.setBounds(540, 370, 63, 23);
+
+        setBounds(0, 0, 665, 457);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jtcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtcodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtcodigoActionPerformed
+
+    private void btpesquActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btpesquActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btpesquActionPerformed
+
+    private void jtnomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtnomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtnomeActionPerformed
+
+    private void jrativoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrativoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrativoActionPerformed
+
+    private void jrinativoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrinativoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrinativoActionPerformed
+
+    private void JBsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsalvarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBsalvarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton JBeditar;
+    private javax.swing.JButton JBexcluir;
+    private javax.swing.JButton JBnovo;
+    private javax.swing.JButton JBsair;
+    private javax.swing.JButton JBsalvar;
+    private javax.swing.JButton btpesqu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JRadioButton jrativo;
+    private javax.swing.JRadioButton jrinativo;
+    private javax.swing.JTextField jtcodigo;
+    private javax.swing.JTextField jtcpf;
+    private com.toedter.calendar.JDateChooser jtdata;
+    private javax.swing.JTextArea jtend;
+    private javax.swing.JTextField jtnome;
+    private javax.swing.JTextField jtrg;
+    private javax.swing.JTextField jttel;
     // End of variables declaration//GEN-END:variables
 }
