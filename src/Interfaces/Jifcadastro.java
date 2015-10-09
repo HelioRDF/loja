@@ -27,6 +27,7 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btpesqu = new javax.swing.JButton();
@@ -51,6 +52,7 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
         JBsalvar = new javax.swing.JButton();
         JBsair = new javax.swing.JButton();
         JBexcluir = new javax.swing.JButton();
+        JBcancelar = new javax.swing.JButton();
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -62,20 +64,20 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Código:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 40, 50, 14);
+        jLabel1.setBounds(30, 40, 70, 20);
 
         jLabel2.setText("Nome:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 40, 50, 14);
+        jLabel2.setBounds(140, 40, 70, 20);
 
-        btpesqu.setText("Ok");
+        btpesqu.setText("...");
         btpesqu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btpesquActionPerformed(evt);
             }
         });
         getContentPane().add(btpesqu);
-        btpesqu.setBounds(430, 60, 45, 23);
+        btpesqu.setBounds(410, 60, 45, 23);
 
         jtcodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,47 +85,54 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jtcodigo);
-        jtcodigo.setBounds(30, 60, 70, 20);
+        jtcodigo.setBounds(30, 60, 70, 30);
 
+        jtnome.setEnabled(false);
         jtnome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtnomeActionPerformed(evt);
             }
         });
         getContentPane().add(jtnome);
-        jtnome.setBounds(140, 60, 260, 20);
+        jtnome.setBounds(140, 60, 260, 30);
+
+        jtdata.setEnabled(false);
         getContentPane().add(jtdata);
-        jtdata.setBounds(500, 60, 130, 20);
+        jtdata.setBounds(500, 60, 130, 30);
 
         jLabel3.setText("Data do Cadastro:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(500, 40, 100, 14);
+        jLabel3.setBounds(500, 40, 120, 20);
 
-        jttel.setText("jTextField3");
+        jttel.setEnabled(false);
         getContentPane().add(jttel);
-        jttel.setBounds(410, 160, 200, 20);
+        jttel.setBounds(410, 160, 200, 30);
 
         jLabel4.setText("Endereço:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 220, 60, 14);
+        jLabel4.setBounds(30, 220, 80, 20);
 
         jLabel5.setText("CPF:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(220, 130, 23, 14);
-        getContentPane().add(jtrg);
-        jtrg.setBounds(30, 160, 130, 20);
+        jLabel5.setBounds(220, 130, 40, 20);
 
-        jtcpf.setText("jTextField3");
+        jtrg.setEnabled(false);
+        getContentPane().add(jtrg);
+        jtrg.setBounds(30, 160, 130, 30);
+
+        jtcpf.setEnabled(false);
         getContentPane().add(jtcpf);
-        jtcpf.setBounds(220, 160, 140, 20);
+        jtcpf.setBounds(220, 160, 140, 30);
 
         jtend.setColumns(20);
         jtend.setRows(5);
+        jtend.setEnabled(false);
         jScrollPane1.setViewportView(jtend);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(30, 240, 440, 96);
 
+        buttonGroup1.add(jrativo);
         jrativo.setText("Ativo");
         jrativo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,8 +140,9 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jrativo);
-        jrativo.setBounds(500, 260, 51, 23);
+        jrativo.setBounds(500, 260, 70, 30);
 
+        buttonGroup1.add(jrinativo);
         jrinativo.setText("Inativo");
         jrinativo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,44 +150,62 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jrinativo);
-        jrinativo.setBounds(500, 290, 59, 23);
+        jrinativo.setBounds(500, 290, 80, 30);
 
         jLabel6.setText("Telefone:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(410, 130, 46, 14);
+        jLabel6.setBounds(410, 130, 70, 20);
 
         jLabel7.setText("Status:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(510, 240, 35, 14);
+        jLabel7.setBounds(510, 240, 60, 20);
 
         jLabel8.setText("RG:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 130, 18, 14);
+        jLabel8.setBounds(30, 130, 40, 20);
 
         JBnovo.setText("Novo");
+        JBnovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBnovoActionPerformed(evt);
+            }
+        });
         getContentPane().add(JBnovo);
-        JBnovo.setBounds(40, 370, 57, 23);
+        JBnovo.setBounds(40, 370, 60, 30);
 
         JBeditar.setText("Editar");
+        JBeditar.setEnabled(false);
         getContentPane().add(JBeditar);
-        JBeditar.setBounds(150, 370, 61, 23);
+        JBeditar.setBounds(120, 370, 70, 30);
 
         JBsalvar.setText("Salvar");
+        JBsalvar.setEnabled(false);
         JBsalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBsalvarActionPerformed(evt);
             }
         });
         getContentPane().add(JBsalvar);
-        JBsalvar.setBounds(270, 370, 63, 23);
+        JBsalvar.setBounds(210, 370, 70, 30);
 
         JBsair.setText("Sair");
         getContentPane().add(JBsair);
-        JBsair.setBounds(400, 370, 51, 23);
+        JBsair.setBounds(290, 370, 60, 30);
 
         JBexcluir.setText("Excluir");
+        JBexcluir.setEnabled(false);
         getContentPane().add(JBexcluir);
-        JBexcluir.setBounds(540, 370, 63, 23);
+        JBexcluir.setBounds(490, 370, 70, 30);
+
+        JBcancelar.setText("Cancelar");
+        JBcancelar.setEnabled(false);
+        JBcancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBcancelarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JBcancelar);
+        JBcancelar.setBounds(360, 370, 90, 30);
 
         setBounds(0, 0, 665, 457);
     }// </editor-fold>//GEN-END:initComponents
@@ -204,16 +232,68 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
 
     private void JBsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsalvarActionPerformed
         // TODO add your handling code here:
+        
+        jtnome.setEnabled(false);
+        jtend.setEnabled(false);
+        jtcpf.setEnabled(false);
+        jtrg.setEnabled(false);
+        jttel.setEnabled(false);
+        jtcodigo.setEnabled(false);
+        
+              
+        JBeditar.setEnabled(false);
+        JBsalvar.setEnabled(false);
+        JBcancelar.setEnabled(false);
+       
+        JBnovo.setEnabled(false);
+        
+        
+        jtnome.setText("");
+        jtend.setText("");
+        jtcpf.setText("");
+        jtrg.setText("");
+        jttel.setText("");
+        jtend.setText("");
+        jtcodigo.setText("");
+        
+        
+        
+        
     }//GEN-LAST:event_JBsalvarActionPerformed
+
+    private void JBcancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBcancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBcancelarActionPerformed
+
+    private void JBnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBnovoActionPerformed
+        // TODO add your handling code here:
+        jtnome.setEnabled(true);
+        jtend.setEnabled(true);
+        jtcpf.setEnabled(true);
+        jtrg.setEnabled(true);
+        jttel.setEnabled(true);
+        
+        
+        
+        JBeditar.setEnabled(true);
+        JBsalvar.setEnabled(true);
+        JBcancelar.setEnabled(true);
+        jrativo.setSelected(true);
+        JBnovo.setEnabled(false);
+        
+        
+    }//GEN-LAST:event_JBnovoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JBcancelar;
     private javax.swing.JButton JBeditar;
     private javax.swing.JButton JBexcluir;
     private javax.swing.JButton JBnovo;
     private javax.swing.JButton JBsair;
     private javax.swing.JButton JBsalvar;
     private javax.swing.JButton btpesqu;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
