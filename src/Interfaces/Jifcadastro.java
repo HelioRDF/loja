@@ -79,6 +79,7 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
         getContentPane().add(btpesqu);
         btpesqu.setBounds(410, 60, 45, 23);
 
+        jtcodigo.setEnabled(false);
         jtcodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtcodigoActionPerformed(evt);
@@ -233,29 +234,7 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
     private void JBsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsalvarActionPerformed
         // TODO add your handling code here:
         
-        jtnome.setEnabled(false);
-        jtend.setEnabled(false);
-        jtcpf.setEnabled(false);
-        jtrg.setEnabled(false);
-        jttel.setEnabled(false);
-        jtcodigo.setEnabled(false);
-        
-              
-        JBeditar.setEnabled(false);
-        JBsalvar.setEnabled(false);
-        JBcancelar.setEnabled(false);
-       
-        JBnovo.setEnabled(false);
-        
-        
-        jtnome.setText("");
-        jtend.setText("");
-        jtcpf.setText("");
-        jtrg.setText("");
-        jttel.setText("");
-        jtend.setText("");
-        jtcodigo.setText("");
-        
+      salvar();
         
         
         
@@ -267,20 +246,7 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
 
     private void JBnovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBnovoActionPerformed
         // TODO add your handling code here:
-        jtnome.setEnabled(true);
-        jtend.setEnabled(true);
-        jtcpf.setEnabled(true);
-        jtrg.setEnabled(true);
-        jttel.setEnabled(true);
-        
-        
-        
-        JBeditar.setEnabled(true);
-        JBsalvar.setEnabled(true);
-        JBcancelar.setEnabled(true);
-        jrativo.setSelected(true);
-        JBnovo.setEnabled(false);
-        
+        novo();// chama o método novo.
         
     }//GEN-LAST:event_JBnovoActionPerformed
 
@@ -313,4 +279,56 @@ public class Jifcadastro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtrg;
     private javax.swing.JTextField jttel;
     // End of variables declaration//GEN-END:variables
+
+
+public void novo(){//método que define a ação do botão novo.
+     
+        jtnome.setEnabled(true);
+        jtend.setEnabled(true);
+        jtcpf.setEnabled(true);
+        jtrg.setEnabled(true);
+        jttel.setEnabled(true);
+        jtcodigo.setEnabled(false);
+        
+        
+        JBeditar.setEnabled(true);
+        JBsalvar.setEnabled(true);
+        JBcancelar.setEnabled(true);
+        jrativo.setSelected(true);
+        JBnovo.setEnabled(false);
+        
+}//fim do método novo.
+
+
+public void salvar(){//método que define a ação do botão salvar.
+
+  jtnome.setEnabled(false);
+        jtend.setEnabled(false);
+        jtcpf.setEnabled(false);
+        jtrg.setEnabled(false);
+        jttel.setEnabled(false);
+        jtcodigo.setEnabled(false);
+        
+              
+        JBeditar.setEnabled(false);
+        JBsalvar.setEnabled(false);
+        JBcancelar.setEnabled(false);
+       
+        JBnovo.setEnabled(false);
+        
+        
+        jtnome.setText("");
+        jtend.setText("");
+        jtcpf.setText("");
+        jtrg.setText("");
+        jttel.setText("");
+        jtend.setText("");
+        jtcodigo.setText("");
+
+
+}//Fim do método salvar.
+
+    
+
+
 }
